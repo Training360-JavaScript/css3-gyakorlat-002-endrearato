@@ -90,7 +90,7 @@ html, body {
 
 /* 9: a menu__hamburger osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
-.menu__hamburger span::after {
+.menu__hamburger span::after, .menu__hamburger span::before {
   position: absolute;
   display: block;
   left: 0;
@@ -99,15 +99,7 @@ before vagy after pszeudo-elemei */
   background-color: #fff;
   content: "";
 }
-.menu__hamburger span::before {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #fff;
-  content: "";
-}
+
 
 /* 10: a menu__hamburger osztályú elemeken belül lévő span elemek 
 before pszeudo-elemei */
@@ -128,14 +120,11 @@ before pszeudo-elemei */
 
 /* 13: a menu__hamburger--htx osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
-.menu__hamburger--htx span::before {
+.menu__hamburger--htx span::before, .menu__hamburger--htx span::after {
   transition-duration: 0.3s, 0.3s;
   transition-delay: 0.3s, 0s;
 }
-.menu__hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
-}
+
 /* 14: a menu__hamburger--htx osztályú elemeken belül lévő span elemek 
 before pszeudo-elemei */
 .menu__hamburger--htx span::before {
@@ -170,8 +159,6 @@ after pszeudo-elemei */
 
 /* 19: a menu__hamburger--htx és az is-active osztályhoz egyszerre tartozó
  elemeken belül lévő span elemek before vagy after pszeudo-elemei */
- .menu__hamburger--htx.is-active span::before {
-  transition-delay: 0s, 0.3s;
-}.menu__hamburger--htx.is-active span::after {
+ .menu__hamburger--htx.is-active span::before, .menu__hamburger--htx.is-active span::after {
   transition-delay: 0s, 0.3s;
 }
